@@ -11,7 +11,7 @@ class OrderRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class OrderRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'customer_name' => 'min:3|required',
+            'order_value' => 'required|numeric'
         ];
     }
+
 }

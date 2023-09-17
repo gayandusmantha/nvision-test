@@ -16,12 +16,8 @@ use App\Http\Controllers\OrderController;
 */
 Route::POST('login',  [AuthController::class, 'login'])->name('login');
 
-//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//    return $request->user();
-//});
-
 Route::middleware('auth:api')->prefix('/order')->group(function () {
-    Route::POST('create',[OrderController::class, 'create'])->name('order-create');
+    Route::POST('create',[OrderController::class, 'store'])->name('order-create');
 });
 
 Route::middleware('auth:api')->group(function () {
