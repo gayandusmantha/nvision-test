@@ -1,6 +1,6 @@
 # nvision_test
    - Starting time: 2023-sep-17 11.00
-   - Completed time: 2023-sep-17 11.00
+   - Completed time: 2023-sep-17 15.30
 
 ## This project includes 3 docker containers 
     1. Database > db_nvision
