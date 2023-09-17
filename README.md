@@ -1,5 +1,6 @@
 # nvision_test
   Starting time : 2023-sep-17 11.00
+  Completed time : 2023-sep-17 11.00
 
 ## This project includes 3 docker containers 
     1. Database > db_nvision
@@ -15,7 +16,7 @@
           DB_PORT=3318
           DB_DATABASE=nvision
           DB_USERNAME=root
-          DB_PASSWORD=nvision123     
+          DB_PASSWORD=nvision123
    
    ## Once Container is getting up run the following commands 
        docker exec -it php_nvision composer install;
