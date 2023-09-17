@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\OrderRequest;
 use Carbon\Carbon;
 use App\Repositories\Interfaces\OrderRepositoryInterface;
+use App\Jobs\ProcessOrders;
 
 
 class OrderController extends Controller
@@ -23,7 +24,8 @@ class OrderController extends Controller
     {
         $request = $request->validated();
         $order = $this->orderRepository->storeOrder($request);
-        $this->orderRepository->submitRemoteServer($order);
+        // $this->orderRepository->submitRemoteServer($order);
+        ProcessOrders::dispatch($order)->afterCommit();
         return response()->json([
             'meta' => [
                 'status' => true,
