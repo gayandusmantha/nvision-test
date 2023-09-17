@@ -1,6 +1,6 @@
 # nvision_test
-  Starting time : 2023-sep-17 11.00
-  Completed time : 2023-sep-17 11.00
+   - Starting time: 2023-sep-17 11.00
+   - Completed time: 2023-sep-17 11.00
 
 ## This project includes 3 docker containers 
     1. Database > db_nvision
@@ -17,7 +17,10 @@
           DB_DATABASE=nvision
           DB_USERNAME=root
           DB_PASSWORD=nvision123
-   
+          
+   ## Additional.env changes
+         QUEUE_CONNECTION=database   ***change the existing value to the database 
+         REMOTE_ENDPOINT_URL=https://wibip.free.beeceptor.com
    ## Once Container is getting up run the following commands 
        docker exec -it php_nvision composer install;
        docker exec -it php_nvision php artisan migrate;
