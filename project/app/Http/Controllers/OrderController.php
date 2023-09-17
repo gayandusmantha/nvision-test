@@ -23,6 +23,7 @@ class OrderController extends Controller
     {
         $request = $request->validated();
         $order = $this->orderRepository->storeOrder($request);
+        $this->orderRepository->submitRemoteServer($order);
         return response()->json([
             'meta' => [
                 'status' => true,
