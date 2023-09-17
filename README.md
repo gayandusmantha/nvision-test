@@ -18,10 +18,10 @@
           DB_PASSWORD=nvision123     
    
    ## Once Container is getting up run the following commands 
-      `docker exec -it php_nvision composer install;`
-      `docker exec -it php_nvision php artisan passport:install;`
-      `docker exec -it php_nvision php artisan migrate;
+       docker exec -it php_nvision composer install;
+       docker exec -it php_nvision php artisan migrate;
        docker exec -it php_nvision php artisan db:seed;
+       docker exec -it php_nvision php artisan passport:install;
 
    ## Please import postman environment and collection and execute the API (collection located root folder )    
       

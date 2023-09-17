@@ -1,7 +1,7 @@
 version: '3'
 services:
   #PHP App
-  app:
+  nvision:
     build:
       context: .
       dockerfile: config/dockerfile
